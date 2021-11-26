@@ -1,8 +1,8 @@
+import data from '../data/QuizData';
+import { COLORS, SIZES } from '../constants';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, StatusBar, Image, TouchableOpacity, Modal, Animated } from 'react-native'
-import { COLORS, SIZES } from '../constants';
-import data from '../data/QuizData';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Quiz = () => {
 
@@ -157,7 +157,7 @@ const Quiz = () => {
                 style={{
                     marginTop: 20, width: '100%', backgroundColor: COLORS.accent, padding: 20, borderRadius: 5
                 }}>
-                    <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Next</Text>
+                    <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Siguiente</Text>
                 </TouchableOpacity>
             )
         }else{
@@ -239,7 +239,7 @@ const Quiz = () => {
                            padding: 20,
                            alignItems: 'center'
                        }}>
-                           <Text style={{fontSize: 30, fontWeight: 'bold'}}>{ score> (allQuestions.length/2) ? 'Congratulations!' : 'Oops!' }</Text>
+                           <Text style={{fontSize: 30, fontWeight: 'bold'}}>{ score> (allQuestions.length/2) ? 'Felicidades!' : 'F en el chat!' }</Text>
 
                            <View style={{
                                flexDirection: 'row',
@@ -264,7 +264,7 @@ const Quiz = () => {
                            }}>
                                <Text style={{
                                    textAlign: 'center', color: COLORS.white, fontSize: 20
-                               }}>Retry Quiz</Text>
+                               }}>Retintentar</Text>
                            </TouchableOpacity>
 
                        </View>
@@ -287,7 +287,17 @@ const Quiz = () => {
                 }}
                 resizeMode={'contain'}
                 />
-
+                <Text style={{
+                    textAlign: 'center',fontSize: 12, color: COLORS.white
+                }}>
+                    
+                    Christian Eduardo Sánchez Orozco (20198145)
+                </Text>
+                <Text style={{
+                    textAlign: 'center',fontSize: 12, color: COLORS.white
+                }}>
+                    Alan Manuel Silva Larios  (20167265)
+                </Text>
            </View>
        </SafeAreaView>
     )
